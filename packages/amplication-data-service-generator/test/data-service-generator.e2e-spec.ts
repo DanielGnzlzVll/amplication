@@ -65,13 +65,9 @@ describe("Data Service Generator", () => {
     };
 
     // Cleanup Docker Compose before run
-    console.info("Cleaning up Docker Compose...");
     await down(dockerComposeOptions);
 
     // Run with Docker Compose
-    console.info("Getting Docker Compose up...");
-
-    // Always uses the -d flag due to non interactive mode
     await compose.upAll({
       ...dockerComposeOptions,
       commandOptions: ["--build", "--force-recreate"],
