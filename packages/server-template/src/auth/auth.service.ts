@@ -1,11 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { PasswordService } from "./password.service";
-// @ts-ignore
-// eslint-disable-next-line
 import { UserService } from "../user/user.service";
-// @ts-ignore
-// eslint-disable-next-line
-import { User } from "../user/user";
+import { User } from "../user/User";
 
 export type UserInfo = Pick<User, "username" | "roles">;
 

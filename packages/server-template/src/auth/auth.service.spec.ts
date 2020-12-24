@@ -1,17 +1,18 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { AuthService } from "./auth.service";
-// @ts-ignore
-// eslint-disable-next-line
-import { UserService, User } from "../user/user.service";
+import { UserService } from "../user/user.service";
+import { User } from "../user/User";
 import { PasswordService } from "./password.service";
 
 const VALID_USER: User = {
   username: "Valid User",
   password: "Valid User Password",
+  roles: ["user"],
 };
 const INVALID_USER: User = {
   username: "Invalid User",
   password: "Invalid User Password",
+  roles: ["user"],
 };
 
 const userService = {
